@@ -1,1 +1,1 @@
-** Почта для обратной связи: nazhuravel@edu.hse.ru **
+Почта для обратной связи: nazhuravel@edu.hse.ru*

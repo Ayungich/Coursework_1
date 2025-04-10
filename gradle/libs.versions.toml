@@ -1,0 +1,68 @@
+[versions]
+agp = "8.8.2"
+android = "11.11.0"
+annotation = "1.9.1"
+circleimageview = "3.1.0"
+githubMpandroidchart = "v3.1.0"
+glide = "4.16.0"
+hellochartsLibrary = "1.5.8"
+junit = "4.13.2"
+junitVersion = "1.2.1"
+espressoCore = "3.6.1"
+appcompat = "1.7.0"
+kotlinVersion = "2.1.20"
+mapboxAndroidAccounts = "0.7.0"
+mapboxAndroidSdk = "9.2.1"
+mapboxSdkGeojson = "7.3.2"
+mapboxSdkServices = "5.8.0"
+mapboxSdkServicesVersion = "7.3.2"
+material = "1.12.0"
+activity = "1.10.1"
+constraintlayout = "2.2.1"
+materialCalendarview = "1.4.3"
+mpandroidchart = "v3.0.3"
+osmdroidAndroid = "6.1.20"
+playServicesLocation = "21.3.0"
+playServicesMaps = "19.1.0"
+retrofit = "2.9.0"
+lifecycleViewmodelAndroid = "2.8.7"
+kotlin = "1.9.24"
+coreKtx = "1.15.0"
+
+[libraries]
+android = { module = "com.mapbox.maps:android", version.ref = "android" }
+annotation = { module = "androidx.annotation:annotation", version.ref = "annotation" }
+circleimageview = { module = "de.hdodenhof:circleimageview", version.ref = "circleimageview" }
+converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofit" }
+converter-moshi = { module = "com.squareup.retrofit2:converter-moshi", version.ref = "retrofit" }
+glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
+hellocharts-library = { module = "com.github.lecho:hellocharts-library", version.ref = "hellochartsLibrary" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+kotlin-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlinVersion" }
+mapbox-android-accounts = { module = "com.mapbox.mapboxsdk:mapbox-android-accounts", version.ref = "mapboxAndroidAccounts" }
+mapbox-android-sdk = { module = "com.mapbox.mapboxsdk:mapbox-android-sdk", version.ref = "mapboxAndroidSdk" }
+mapbox-sdk-core = { module = "com.mapbox.mapboxsdk:mapbox-sdk-core", version.ref = "mapboxSdkGeojson" }
+mapbox-sdk-geojson = { module = "com.mapbox.mapboxsdk:mapbox-sdk-geojson", version.ref = "mapboxSdkGeojson" }
+mapbox-sdk-services = { module = "com.mapbox.mapboxsdk:mapbox-sdk-services", version.ref = "mapboxSdkServices" }
+mapbox-sdk-services-v732 = { module = "com.mapbox.mapboxsdk:mapbox-sdk-services", version.ref = "mapboxSdkServicesVersion" }
+mapbox-sdk-turf = { module = "com.mapbox.mapboxsdk:mapbox-sdk-turf", version.ref = "mapboxSdkGeojson" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+material-calendarview = { module = "com.prolificinteractive:material-calendarview", version.ref = "materialCalendarview" }
+mpandroidchart = { module = "com.github.PhilJay:MPAndroidChart", version.ref = "mpandroidchart" }
+mpandroidchart-vv310 = { module = "com.github.PhilJay:MPAndroidChart", version.ref = "githubMpandroidchart" }
+osmdroid-android = { module = "org.osmdroid:osmdroid-android", version.ref = "osmdroidAndroid" }
+play-services-location = { module = "com.google.android.gms:play-services-location", version.ref = "playServicesLocation" }
+play-services-maps = { module = "com.google.android.gms:play-services-maps", version.ref = "playServicesMaps" }
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+lifecycle-viewmodel-android = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-android", version.ref = "lifecycleViewmodelAndroid" }
+core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+

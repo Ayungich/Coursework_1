@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Travelapp"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+
+        <activity
+            android:name=".view.activities.splash.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- LoginActivity с intent-фильтром для сброса пароля -->
+        <activity
+            android:name=".view.activities.login.LoginActivity"
+            android:exported="true">
+            <intent-filter android:autoVerify="true">
+                <!-- Этот фильтр обрабатывает ссылки для сброса пароля -->
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:scheme="http"
+                    android:host="10.0.2.2"
+                    android:path="/api/auth/reset-password" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".view.activities.PasswordResetActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- Используем кастомную схему -->
+                <data
+                    android:scheme="travelapp"
+                    android:host="auth"
+                    android:path="/reset-password" />
+            </intent-filter>
+        </activity>
+
+        <!-- MainPageActivity -->
+        <activity
+            android:name=".view.activities.main.MainPageActivity"
+            android:exported="true" />
+
+        <!-- RegistrationActivity с intent-фильтром для подтверждения email -->
+        <activity
+            android:name=".view.activities.registration.RegistrationActivity"
+            android:exported="true">
+            <intent-filter android:autoVerify="true">
+                <!-- Этот фильтр обрабатывает ссылки для подтверждения email -->
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:scheme="http"
+                    android:host="10.0.2.2"
+                    android:path="/api/auth/confirm" />
+            </intent-filter>
+        </activity>
+
+        <!-- DiariesActivity -->
+        <activity
+            android:name=".view.activities.diary.DiariesActivity"
+            android:exported="true" />
+        <!-- DiaryCreateActivity -->
+        <activity
+            android:name=".view.activities.diary.DiaryCreateActivity"
+            android:exported="true" />
+        <!-- DiaryActivity -->
+        <activity
+            android:name=".view.activities.diary.DiaryActivity"
+            android:exported="true" />
+        <!-- ProfileActivity -->
+        <activity
+            android:name=".view.activities.profile.ProfileActivity"
+            android:exported="true" />
+        <!-- TripCreateActivity -->
+        <activity
+            android:name=".view.activities.trip.TripCreateActivity"
+            android:exported="true" />
+        <!-- TripsActivity -->
+        <activity
+            android:name=".view.activities.trip.TripsActivity"
+            android:exported="true" />
+        <!-- PackingItemsActivity -->
+        <activity
+            android:name=".view.activities.packing.PackingItemsActivity"
+            android:exported="true" />
+        <!-- PackingItemCreateActivity -->
+        <activity
+            android:name=".view.activities.packing.PackingItemCreateActivity"
+            android:exported="true" />
+        <!-- PackingItemEditActivity -->
+        <activity
+            android:name=".view.activities.packing.PackingItemEditActivity"
+            android:exported="true" />
+        <!-- DiaryEditActivity -->
+        <activity
+            android:name=".view.activities.diary.DiaryEditActivity"
+            android:exported="true" />
+        <!-- TripEditActivity -->
+        <activity
+            android:name=".view.activities.trip.TripEditActivity"
+            android:exported="true" />
+        <!-- RoutesActivity -->
+        <activity
+            android:name=".view.activities.route.RoutesActivity"
+            android:exported="true" />
+        <!-- SettingsActivity -->
+        <activity
+            android:name=".view.activities.settings.SettingsActivity"
+            android:exported="true" />
+        <!-- BudgetsActivity -->
+        <activity
+            android:name=".view.activities.budget.BudgetsActivity"
+            android:exported="true" />
+        <!-- BudgetCreateActivity -->
+        <activity
+            android:name=".view.activities.budget.BudgetCreateActivity"
+            android:exported="true" />
+        <!-- BudgetEditActivity -->
+        <activity
+            android:name=".view.activities.budget.BudgetEditActivity"
+            android:exported="true" />
+        <!-- BudgetItemCreateActivity -->
+        <activity
+            android:name=".view.activities.budget.BudgetItemCreateActivity"
+            android:exported="true" />
+        <!-- BudgetItemsActivity -->
+        <activity
+            android:name=".view.activities.budget.BudgetItemsActivity"
+            android:exported="true" />
+        <!-- BudgetItemEditActivity -->
+        <activity
+            android:name=".view.activities.budget.BudgetItemEditActivity"
+            android:exported="true" />
+        <!-- CalendarActivity -->
+        <activity
+            android:name=".view.activities.calendar.CalendarActivity"
+            android:exported="true" />
+        <!-- TripBudgetAnalyticsActivity -->
+        <activity
+            android:name=".view.activities.analytics.TripBudgetAnalyticsActivity"
+            android:exported="true" />
+        <!-- MapActivity -->
+        <activity
+            android:name=".view.activities.MapActivity"
+            android:exported="true" />
+        <!-- AnalyticsActivity -->
+        <activity
+            android:name=".view.activities.analytics.AnalyticsActivity"
+            android:exported="true" />
+    </application>
+
+</manifest>

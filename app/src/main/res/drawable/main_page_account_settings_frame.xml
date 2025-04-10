@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Фон формы -->
+    <item>
+        <shape android:shape="rectangle">
+            <!-- Закругление только снизу -->
+            <corners
+                android:bottomLeftRadius="28dp"
+                android:bottomRightRadius="28dp" />
+            <solid android:color="#FFFFFF" />
+        </shape>
+    </item>
+
+    <!-- Контур формы -->
+    <item>
+        <shape android:shape="rectangle">
+            <!-- Закругление только снизу -->
+            <corners
+                android:bottomLeftRadius="28dp"
+                android:bottomRightRadius="28dp" />
+            <stroke
+                android:width="5dp"
+                android:color="#E9E9EB" />
+        </shape>
+    </item>
+
+</layer-list>

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#9BDDFF"
+    tools:context=".view.activities.profile.ProfileActivity">
+
+    <!-- Аватар -->
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/avatar"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/user_default_avatar"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:civ_border_width="0dp" />
+
+    <!-- Сменить фото -->
+    <TextView
+        android:id="@+id/changePhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/profile_change_avatar_text"
+        android:clickable="true"
+        android:focusable="true"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:layout_marginTop="8dp"
+        android:textAppearance="@style/CurrentCityStyle"
+        app:layout_constraintTop_toBottomOf="@id/avatar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Поле: Почта -->
+    <EditText
+        android:id="@+id/emailInput"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/profile_field_frame"
+        android:hint="@string/email_label"
+        android:textAppearance="@style/ProfileFieldLabelsStyle"
+        android:paddingStart="16dp"
+        app:layout_constraintTop_toBottomOf="@id/changePhoto"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        tools:ignore="RtlSymmetry" />
+
+    <!-- Поле: Логин -->
+
+    <!-- Поле: Пароль (с глазиком) -->
+    <EditText
+        android:id="@+id/loginInput"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/profile_field_frame"
+        android:focusable="true"
+        android:clickable="true"
+        android:hint="@string/login_label"
+        android:paddingStart="16dp"
+        android:textAppearance="@style/ProfileFieldLabelsStyle"
+        app:layout_constraintEnd_toEndOf="@id/emailInput"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@id/emailInput"
+        app:layout_constraintTop_toBottomOf="@id/emailInput"
+        tools:ignore="RtlSymmetry" />
+
+    <LinearLayout
+        android:id="@+id/password_input_frame"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/profile_field_frame"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/loginInput"
+        app:layout_constraintStart_toStartOf="@id/loginInput"
+        app:layout_constraintEnd_toEndOf="@id/loginInput">
+
+        <EditText
+            android:id="@+id/passwordInput"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="@string/password_label"
+            android:inputType="textPassword"
+            android:textAppearance="@style/ProfileFieldLabelsStyle"
+            android:background="@null"
+            android:paddingStart="16dp"
+            tools:ignore="RtlSymmetry" />
+
+        <ImageButton
+            android:id="@+id/passwordToggle"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="16dp"
+            android:background="@null"
+            android:src="@drawable/ic_visibility_off"
+            android:contentDescription="@string/password_toggle_visibility_image_description" />
+    </LinearLayout>
+
+    <!-- Пол (с иконкой выбора) -->
+    <LinearLayout
+        android:id="@+id/gender_input_frame"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/profile_field_frame"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/password_input_frame"
+        app:layout_constraintStart_toStartOf="@id/password_input_frame"
+        app:layout_constraintEnd_toEndOf="@id/password_input_frame">
+
+        <TextView
+            android:id="@+id/genderLabel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="@string/gender_choice_label"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:background="@null"
+            android:focusable="false"
+            android:clickable="true"
+            android:textAppearance="@style/ProfileFieldLabelsStyle"
+            tools:ignore="RtlSymmetry" />
+
+        <ImageButton
+            android:id="@+id/genderArrow"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="16dp"
+            android:background="@null"
+            android:src="@drawable/sex_choice_arrow"
+            android:contentDescription="@string/gender_selector" />
+    </LinearLayout>
+
+    <!-- Кнопка Сохранить -->
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/profile_save_button_label"
+        android:textAppearance="@style/ProfileFieldLabelsStyle"
+        android:background="@drawable/profile_save_button_frame"
+        android:backgroundTint="@android:color/transparent"
+        android:backgroundTintMode="src_over"
+        app:layout_constraintTop_toBottomOf="@id/gender_input_frame"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageButton
+        android:id="@+id/back_button"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/round_icon_button"
+        android:src="@drawable/ic_back"
+        android:scaleType="centerInside"
+        android:contentDescription="@string/back_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/button_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Кнопка Delete -->
+        <ImageButton
+            android:id="@+id/delete_button"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="@drawable/round_icon_button"
+            android:src="@drawable/ic_delete_big"
+            android:scaleType="centerInside" />
+
+        <!-- Кнопка Logout -->
+        <ImageButton
+            android:id="@+id/logout_button"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="4dp"
+            android:background="@drawable/round_icon_button"
+            android:contentDescription="@string/logout_button_icon"
+            android:src="@drawable/ic_logout"
+            android:scaleType="centerInside" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/saveButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- TextView для отображения ошибок -->
+    <TextView
+        android:id="@+id/errorText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/progressBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/error_text" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

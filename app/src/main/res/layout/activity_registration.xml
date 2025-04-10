@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/registration_main_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:fitsSystemWindows="true"
+    tools:ignore="UnusedAttribute">
+
+    <!-- Основной фрейм регистрации -->
+    <View
+        android:id="@+id/reg_main_frame"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/registration_main_frame"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Задний фон с самолетами -->
+    <ImageView
+        android:id="@+id/reg_background_with_stars"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/authorization_travel_app_logo_description"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background_with_planes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/reg_main_frame" />
+
+    <!-- Пригласительный текст -->
+
+
+    <!-- Промпт для входа с помощью электронной почты -->
+
+    <TextView
+        android:id="@+id/registration_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:text="@string/registration_welcome_text"
+        android:textAppearance="@style/WelcomeTextStyle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/reg_main_frame" />
+
+    <LinearLayout
+        android:id="@+id/email_input_frame"
+        android:layout_width="265dp"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:background="@drawable/google_auth_frame"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/registration_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp">
+
+        <EditText
+            android:id="@+id/email_input"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:autofillHints=""
+            android:background="@null"
+            android:hint="@string/email_label"
+            android:inputType="textEmailAddress"
+            android:paddingStart="16dp"
+            android:textAppearance="@style/InputTextStyle"
+            android:textColor="#000000"
+            android:textColorHint="#8BABD3"
+            tools:ignore="RtlSymmetry" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/login_frame"
+        android:layout_width="265dp"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:background="@drawable/google_auth_frame"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/email_input_frame"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp">
+
+        <EditText
+            android:id="@+id/login_input"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:autofillHints=""
+            android:hint="@string/login_label"
+            android:textAppearance="@style/InputTextStyle"
+            android:background="@null"
+            android:paddingStart="16dp"
+            android:inputType="text"
+            android:textColor="#000000"
+            android:textColorHint="#8BABD3"
+            tools:ignore="RtlSymmetry" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/last_name_frame"
+        android:layout_width="265dp"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:background="@drawable/google_auth_frame"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/login_frame"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp">
+
+        <EditText
+            android:id="@+id/last_name_input"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:autofillHints=""
+            android:hint="@string/last_name_label"
+            android:textAppearance="@style/InputTextStyle"
+            android:background="@null"
+            android:paddingStart="16dp"
+            android:inputType="textPersonName"
+            android:textColor="#000000"
+            android:textColorHint="#8BABD3"
+            tools:ignore="RtlSymmetry" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/first_name_frame"
+        android:layout_width="265dp"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:background="@drawable/google_auth_frame"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/last_name_frame"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp">
+
+        <EditText
+            android:id="@+id/first_name_input"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:autofillHints=""
+            android:hint="@string/first_name_label"
+            android:textAppearance="@style/InputTextStyle"
+            android:background="@null"
+            android:paddingStart="16dp"
+            android:inputType="textPersonName"
+            android:textColor="#000000"
+            android:textColorHint="#8BABD3"
+            tools:ignore="RtlSymmetry" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/birthday_frame"
+        android:layout_width="265dp"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:background="@drawable/google_auth_frame"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/first_name_frame"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp">
+
+        <EditText
+            android:id="@+id/birthday_input"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:autofillHints=""
+            android:hint="@string/birthday_date_label"
+            android:textAppearance="@style/InputTextStyle"
+            android:background="@null"
+            android:paddingStart="16dp"
+            android:inputType="date"
+            android:textColor="#000000"
+            android:textColorHint="#8BABD3"
+            tools:ignore="RtlSymmetry" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/sex_frame"
+        android:layout_width="265dp"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:background="@drawable/google_auth_frame"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/birthday_frame"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:id="@+id/gender_choice"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:autofillHints=""
+            android:hint="@string/gender_choice_label"
+            android:textAppearance="@style/InputTextStyle"
+            android:background="@null"
+            android:paddingStart="16dp"
+            android:textColor="#000000"
+            android:textColorHint="#8BABD3"
+            tools:ignore="RtlSymmetry" />
+
+        <!-- Кнопка показать/скрыть пароль -->
+        <ImageButton
+            android:id="@+id/gender_choice_menu_button"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@null"
+            android:contentDescription="@string/registration_gender_choice_button_image_description"
+            android:src="@drawable/sex_choice_arrow"
+            android:layout_marginEnd="16dp" />
+
+    </LinearLayout>
+
+    <!-- Поле ввода пароля -->
+    <LinearLayout
+        android:id="@+id/password_input_frame"
+        android:layout_width="265dp"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:background="@drawable/google_auth_frame"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/sex_frame"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp">
+
+        <EditText
+            android:id="@+id/password_input"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="@string/password_label"
+            android:textAppearance="@style/InputTextStyle"
+            android:background="@null"
+            android:paddingStart="16dp"
+            android:inputType="textPassword"
+            android:textColor="#000000"
+            android:textColorHint="#8BABD3"
+            tools:ignore="RtlSymmetry" />
+
+        <!-- Кнопка показать/скрыть пароль -->
+        <ImageButton
+            android:id="@+id/password_toggle"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@null"
+            android:contentDescription="@string/password_toggle_visibility_image_description"
+            android:src="@drawable/ic_visibility_off"
+            android:layout_marginEnd="16dp" />
+    </LinearLayout>
+
+    <!-- Поле для подтверждения пароля -->
+    <LinearLayout
+        android:id="@+id/password_confirm_input_frame"
+        android:layout_width="265dp"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:background="@drawable/google_auth_frame"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/password_input_frame"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp">
+
+        <EditText
+            android:id="@+id/password_confirm_input"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="@string/password_confirm_label"
+            android:textAppearance="@style/InputTextStyle"
+            android:background="@null"
+            android:paddingStart="16dp"
+            android:inputType="textPassword"
+            android:textColor="#000000"
+            android:textColorHint="#8BABD3"
+            tools:ignore="RtlSymmetry" />
+
+        <!-- Кнопка показать/скрыть пароль -->
+        <ImageButton
+            android:id="@+id/password_confirm_toggle"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@null"
+            android:contentDescription="@string/password_toggle_visibility_image_description"
+            android:src="@drawable/ic_visibility_off"
+            android:layout_marginEnd="16dp" />
+    </LinearLayout>
+
+    <!-- Кнопка авторизации -->
+    <Button
+        android:id="@+id/registration_button"
+        android:layout_width="265dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/free_registration_color"
+        android:padding="10dp"
+        android:text="@string/registration_button_text"
+        android:textAppearance="@style/AuthButtonStyle"
+        app:layout_constraintTop_toBottomOf="@id/password_confirm_input_frame"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/back_to_auth_page_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="@string/registration_back_to_auth_text"
+        android:textAppearance="@style/FreeRegistrationTextStyle"
+        app:layout_constraintTop_toBottomOf="@id/registration_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Прогресс-бар  -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/back_to_auth_page_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- TextView для ошибок -->
+    <TextView
+        android:id="@+id/errorText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="InputtedTextStyle" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:fontFamily">@font/poppins_regular</item> <!-- Шрифт для API 16+ -->
+        <item name="fontFamily">@font/poppins_regular</item> <!-- Поддержка через AppCompat -->
+    </style>
+    <style name="EditTextStyle" parent="Widget.AppCompat.EditText">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+    </style>
+    <style name="CustomAlertDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:typeface">sans</item> <!-- Для старых устройств -->
+        <item name="android:fontFamily">@font/montserrat_regular</item> <!-- Ваш шрифт -->
+        <item name="android:textColor">#000000</item> <!-- Цвет текста -->
+        <item name="android:textSize">16sp</item> <!-- Размер текста -->
+    </style>
+    <style name="CustomAlertDialogTitle">
+        <item name="android:textColor">#000000</item> <!-- Цвет текста -->
+        <item name="android:textSize">17sp</item> <!-- Размер текста -->
+        <item name="android:fontFamily">@font/montserrat_semi_bold</item> <!-- Пользовательский шрифт -->
+    </style>
+    <style name="WelcomeTextStyle">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/welcome_text_color</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/montserrat_semi_bold</item>
+    </style>
+    <!-- Стиль для "Нет аккаунта?" -->
+    <style name="NoAccountTextStyle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#8BABD3</item>
+        <item name="android:lineSpacingExtra">3.6dp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+    </style>
+    <!-- Стиль для "Бесплатная регистрация" -->
+    <style name="FreeRegistrationTextStyle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#1F61FF</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+    </style>
+    <!-- Войти с Google -->
+    <style name="GoogleAuthTextStyle">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:fontFamily">@font/poppins_regular</item> <!-- Если используете шрифт Poppins -->
+    </style>
+    <!-- или войдите с помощью электронной почты -->
+    <style name="EmailSignInTextStyle">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#8BABD3</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+    </style>
+    <style name="InputTextStyle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#8BABD3</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+    </style>
+    <!-- Стиль для "Бесплатная регистрация" -->
+    <style name="AuthButtonStyle">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#4861FF</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:fontFamily">@font/montserrat_regular</item>
+    </style>
+    <!-- Стиль для account_name_text и current_date -->
+    <style name="AccountInfoStyle">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:lineHeight">27sp</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <!-- Стиль для current_city -->
+    <style name="CurrentCityStyle">
+        <item name="android:textSize">30sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:fontFamily">@font/montserrat_semi_bold</item>
+        <item name="android:lineHeight">37sp</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+
+    <style name="ProfileFieldLabelsStyle">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:fontFamily">@font/montserrat_semi_bold</item>
+        <item name="android:lineHeight">37sp</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <!-- Стиль для current_weather -->
+    <style name="CurrentWeatherStyle">
+        <item name="android:textSize">64sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:fontFamily">@font/montserrat_semi_bold</item>
+        <item name="android:lineHeight">78sp</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <!-- Общий стиль для заголовков секций -->
+    <style name="SectionTitleStyle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+    </style>
+</resources>

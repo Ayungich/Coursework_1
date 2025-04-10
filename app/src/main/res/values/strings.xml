@@ -1,0 +1,68 @@
+<resources>
+    <!--Core-->
+    <string name="app_name">Путешествуй!</string>
+    <string name="default_web_client_id">1087741591627-l99bnej6levpe75482lf8gjissroqtbh.apps.googleusercontent.com</string>
+
+    <!--Authorization block-->
+    <string name="authorization_app_name_text">Путешествуй!</string>
+    <string name="authorization_welcome_to_app_text">Добро пожаловать</string>
+    <string name="authorization_no_account_text">Нет аккаунта?</string>
+    <string name="authorization_free_registration_text">Бесплатная регистрация</string>
+    <string name="authorization_email_sign_in_prompt_text">или войдите с помощью электронной почты</string>
+    <string name="authorization_button_text">Войти</string>
+    <string name="error_text">Ошибка</string>
+
+    <!--Registration block-->
+    <string name="registration_welcome_text">Регистрация</string>
+    <string name="registration_button_text">Зарегистрироваться</string>
+    <string name="registration_back_to_auth_text">Авторизация</string>
+
+    <!--Main page block-->
+    <string name="main_page_my_journeys_text">Мои путешествия</string>
+    <string name="main_page_journey_diary_text">Мои дневники</string>
+    <string name="main_page_go_on_a_journey_text">Отправиться в путешествие</string>
+
+    <!--Labels for registration\authorization-->
+    <string name="email_label">Почта</string>
+    <string name="password_label">Пароль</string>
+    <string name="password_confirm_label">Подтвердите пароль</string>
+    <string name="login_label">Логин</string>
+    <string name="last_name_label">Фамилия</string>
+    <string name="first_name_label">Имя</string>
+    <string name="birthday_date_label">Дата рождения</string>
+    <string name="gender_choice_label">Пол</string>
+
+    <!--Labels for profile-->
+    <string name="profile_change_avatar_text">Сменить фото</string>
+    <string name="profile_save_button_label">Сохранить</string>
+
+    <!--Images descriptions-->
+    <string name="authorization_yandex_logo_description">just yandex logo</string>
+    <string name="password_toggle_visibility_image_description">just password logo</string>
+    <string name="registration_gender_choice_button_image_description">just arrow</string>
+    <string name="authorization_travel_app_logo_description">just arrow</string>
+    <string name="main_page_user_avatar_image_description">just user avatar</string>
+    <string name="main_page_settings_image_description">just settings image</string>
+    <string name="main_page_current_weather_image_description">just settings image</string>
+    <string name="gender_selector">Gender Selector</string>
+    <string name="_01_01_24">01.01.24</string>
+    <string name="account_name">account name</string>
+    <string name="avatar_icon">avatar icon</string>
+    <string name="settings_icon">settings icon</string>
+    <string name="add_trip">add trip button\n</string>
+    <string name="default_diary_label">Дневник путешествия в Карелию</string>
+    <string name="_10_05_2024_15_05_2024">10.05.2024 - 15.05.2024</string>
+    <string name="diary_name_label">Название</string>
+    <string name="_01_01_2024">01.01.2024</string>
+    <string name="diary_date_label">Дата</string>
+    <string name="diary_content_label">Ваши мысли</string>
+    <string name="diary_back_button_label">Назад</string>
+    <string name="back_button">back image\n</string>
+    <string name="add_item">add item\n</string>
+    <string name="budget">dollar icon\n</string>
+    <string name="route_planning">waypoint icon\n</string>
+    <string name="packing_list">list icon\n</string>
+    <string name="exit_button_label">Выйти</string>
+    <string name="delete_account_button_label">Удалить аккаунт</string>
+    <string name="logout_button_icon">logout button icon</string>
+</resources>

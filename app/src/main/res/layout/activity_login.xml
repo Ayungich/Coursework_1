@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/registration_main_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:fitsSystemWindows="true"
+    tools:ignore="UnusedAttribute">
+
+    <!-- Основной фрейм регистрации -->
+    <View
+        android:id="@+id/reg_main_frame"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintVertical_bias="0.5"
+        android:background="@drawable/registration_main_frame"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Задний фон с самолетами -->
+    <ImageView
+        android:id="@+id/auth_background_with_planes"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/authorization_travel_app_logo_description"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background_with_planes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/reg_main_frame" />
+    <!-- Логотип -->
+
+    <!-- Пригласительный текст -->
+
+    <!-- Нет аккаунта + бесплатная регистрация -->
+
+    <TextView
+        android:id="@+id/welcome_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="104dp"
+        android:text="@string/authorization_welcome_to_app_text"
+        android:textAppearance="@style/WelcomeTextStyle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/reg_main_frame" />
+
+    <LinearLayout
+        android:id="@+id/no_account_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/welcome_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:id="@+id/no_account_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/authorization_no_account_text"
+            android:textAppearance="@style/NoAccountTextStyle" />
+
+        <TextView
+            android:id="@+id/back_to_auth_page_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="@string/authorization_free_registration_text"
+            android:textAppearance="@style/FreeRegistrationTextStyle" />
+    </LinearLayout>
+
+
+    <!-- Промпт для входа с помощью электронной почты -->
+
+
+    <!-- Поле ввода почты -->
+    <TextView
+        android:id="@+id/email_sign_in_prompt"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/authorization_email_sign_in_prompt_text"
+        android:textAppearance="@style/EmailSignInTextStyle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/no_account_layout" />
+
+    <LinearLayout
+        android:id="@+id/email_input_frame"
+        android:layout_width="265dp"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:background="@drawable/google_auth_frame"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/email_sign_in_prompt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp">
+
+        <EditText
+            android:id="@+id/email_input"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:autofillHints=""
+            android:hint="@string/email_label"
+            android:textAppearance="@style/InputTextStyle"
+            android:background="@null"
+            android:paddingStart="16dp"
+            android:inputType="textEmailAddress"
+            android:textColor="#000000"
+            android:textColorHint="#8BABD3"
+            tools:ignore="RtlSymmetry" />
+    </LinearLayout>
+
+    <!-- Поле ввода пароля -->
+    <LinearLayout
+        android:id="@+id/password_input_frame"
+        android:layout_width="265dp"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:background="@drawable/google_auth_frame"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/email_input_frame"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp">
+
+        <EditText
+            android:id="@+id/password_input"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="@string/password_label"
+            android:textAppearance="@style/InputTextStyle"
+            android:background="@null"
+            android:paddingStart="16dp"
+            android:inputType="textPassword"
+            android:textColor="#000000"
+            android:textColorHint="#8BABD3"
+            tools:ignore="RtlSymmetry" />
+
+        <!-- Кнопка показать/скрыть пароль -->
+        <ImageButton
+            android:id="@+id/password_toggle"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@null"
+            android:contentDescription="@string/password_toggle_visibility_image_description"
+            android:src="@drawable/ic_visibility_off"
+            android:layout_marginEnd="16dp" />
+    </LinearLayout>
+
+    <!-- Кнопка авторизации -->
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="265dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/free_registration_color"
+        android:padding="10dp"
+        android:text="@string/authorization_button_text"
+        android:textAppearance="@style/AuthButtonStyle"
+        app:layout_constraintTop_toBottomOf="@id/password_input_frame"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- ProgressBar для отображения загрузки -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/login_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/forgot_password_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Забыли пароль?"
+        android:textAppearance="@style/FreeRegistrationTextStyle"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintTop_toBottomOf="@id/progressBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- TextView для отображения ошибок -->
+    <TextView
+        android:id="@+id/errorText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/forgot_password_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/error_text" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
